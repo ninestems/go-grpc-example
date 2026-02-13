@@ -6,3 +6,6 @@ buf-install:
 
 servergen:
 	buf generate proto --config bufconfig/server/buf.yaml --template bufconfig/server/buf.gen.yaml
+
+clientgen:
+	buf generate proto --template bufconfig/client/buf.gen.yaml
