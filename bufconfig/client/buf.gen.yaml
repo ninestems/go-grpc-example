@@ -15,6 +15,6 @@ plugins:
     out: internal/client/proto
     opt: paths=source_relative
 inputs:
-  - git_repo: https://github.com/company/common-proto.git
+  - git_repo: https://github.com/ninestems/go-grpc-example.git
     subdir: proto
-    branch: main
+    branch: master

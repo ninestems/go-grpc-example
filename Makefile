@@ -5,10 +5,10 @@ buf-install:
 	buf --version
 
 server-gen:
-	buf generate proto --config bufconfig/server/buf.yaml --template bufconfig/server/buf.gen.yaml
+	buf generate --config bufconfig/server/buf.yaml --template bufconfig/server/buf.gen.yaml
 
 client-gen:
-	buf generate proto --template bufconfig/client/buf.gen.yaml
+	buf generate --template bufconfig/client/buf.gen.yaml
 
 run-server:
 	go run cmd/server/server.go
