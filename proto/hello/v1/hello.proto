@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package hello.v1;
+
+import "meta/v1/meta.proto";
+
+service HelloService {
+  rpc SayHello(HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  meta.v1.Meta meta = 1;
+  string name = 2;
+}
+
+message HelloResponse {
+  meta.v1.MetaResponse meta_response = 1;
+  string greeting = 2;
+}
