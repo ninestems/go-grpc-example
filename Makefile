@@ -4,8 +4,14 @@ buf-install:
 	sudo mv buf /usr/local/bin/buf
 	buf --version
 
-servergen:
+server-gen:
 	buf generate proto --config bufconfig/server/buf.yaml --template bufconfig/server/buf.gen.yaml
 
-clientgen:
+client-gen:
 	buf generate proto --template bufconfig/client/buf.gen.yaml
+
+run-server:
+	go run cmd/server/server.go
+
+run-client:
+	go run cmd/client/client.go
