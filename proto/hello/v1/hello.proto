@@ -3,6 +3,7 @@ syntax = "proto3";
 package hello.v1;
 
 import "meta/v1/meta.proto";
+import "google/protobuf/timestamp.proto";
 
 service HelloService {
   rpc SayHello(HelloRequest) returns (HelloResponse);
@@ -11,6 +12,7 @@ service HelloService {
 message HelloRequest {
   meta.v1.Meta meta = 1;
   string name = 2;
+  google.protobuf.Timestamp created_at = 3;
 }
 
 message HelloResponse {
